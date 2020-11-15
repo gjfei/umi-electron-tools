@@ -1,8 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "start": "concurrently \"cross-env APP_ROOT=src/render umi dev\" \"wait-on http://localhost:3000 && electron .\"",
-    "build": "umi build",
+    "start": "node ./script/dev.js",
+    "start:web": "cross-env APP_ROOT=src/render umi dev",
+    "build": "cross-env APP_ROOT=src/render umi build",
     "postinstall": "umi generate tmp",
     "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
     "test": "umi-test",
@@ -35,8 +36,10 @@
     "chalk": "^4.1.0",
     "concurrently": "^5.3.0",
     "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
     "electron": "^10.1.5",
     "electron-builder": "^22.9.1",
+    "execa": "^4.1.0",
     "wait-on": "^5.2.0"
   }
 }
