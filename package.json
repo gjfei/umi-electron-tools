@@ -3,7 +3,8 @@
   "scripts": {
     "start": "node ./script/dev.js",
     "start:web": "cross-env APP_ROOT=src/render umi dev",
-    "build": "cross-env APP_ROOT=src/render umi build",
+    "build": "node ./script/build.js",
+    "build:web": "cross-env APP_ROOT=src/render umi build",
     "postinstall": "umi generate tmp",
     "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
     "test": "umi-test",
