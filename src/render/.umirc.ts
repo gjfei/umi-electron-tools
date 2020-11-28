@@ -1,5 +1,4 @@
 import { defineConfig } from 'umi';
-
 export default defineConfig({
   favicon: 'favicon.ico',
   base: './',
@@ -10,5 +9,6 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
+  outputPath: '../../dist/umi',
   routes: [{ path: '/', component: '@/pages/index' }],
 });
