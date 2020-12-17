@@ -1,19 +1,25 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
+    "skipLibCheck": true,
+    "module": "commonjs",
     "moduleResolution": "node",
     "importHelpers": true,
+    "target": "es2015",
     "jsx": "react",
     "esModuleInterop": true,
     "sourceMap": true,
     "baseUrl": "./",
+    "inlineSources": true,
+    "noImplicitAny": true,
     "strict": true,
+    "importsNotUsedAsValues": "remove",
     "paths": {
       "@/*": ["src/*"],
       "@@/*": ["src/.umi/*"]
     },
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "allowJs": true
   },
   "include": [
     "mock/**/*",
