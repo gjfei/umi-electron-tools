@@ -9,6 +9,7 @@
     "esModuleInterop": true,
     "sourceMap": true,
     "baseUrl": "./",
+    "outDir": "",
     "inlineSources": true,
     "noImplicitAny": true,
     "strict": true,
@@ -28,7 +29,7 @@
     "dist",
     "scripts",
     "src/.umi/*",
-    "webpack.",
+    "webpack",
     "src/main/build/**/*"
   ]
 }
