@@ -1,11 +1,12 @@
 const path = require('path');
-const resolve = url => path.resolve(__dirname, '../', url);
+const Dotenv = require('dotenv-webpack');
+const pathResolve = (dir = '') => path.join(__dirname, '..', dir); // 指向 src/main
 module.exports = {
   mode: 'production',
   target: 'electron-main',
-  entry: resolve('src/main/index.ts'),
+  entry: pathResolve('index.ts'),
   output: {
-    path: resolve('dist/electron'),
+    path: pathResolve('../../dist/electron'),
     filename: 'index.js',
   },
   resolve: {
@@ -19,4 +20,5 @@ module.exports = {
       },
     ],
   },
+  plugins: [new Dotenv()],
 };

@@ -21,11 +21,14 @@
     "experimentalDecorators": true,
     "allowJs": true
   },
-  "include": [
-    "mock/**/*",
-    "src/**/*",
-    "config/**/*",
-    "src/render/.umirc.ts",
-    "typings.d.ts"
+  "include": ["mock/**/*", "src/**/*"],
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist",
+    "scripts",
+    "src/.umi/*",
+    "webpack.",
+    "src/main/build/**/*"
   ]
 }
