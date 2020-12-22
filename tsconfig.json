@@ -15,14 +15,22 @@
     "strict": true,
     "importsNotUsedAsValues": "remove",
     "paths": {
-      "@/*": ["src/*"],
-      "@@/*": ["src/.umi/*"]
+      "@/*": [
+        "src/*"
+      ],
+      "@@/*": [
+        "src/.umi/*"
+      ]
     },
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "allowJs": true
   },
-  "include": ["mock/**/*", "src/**/*"],
+  "include": [
+    "mock/**/*",
+    "src/**/*",
+    "typings.d.ts"
+  ],
   "exclude": [
     "node_modules",
     "build",
