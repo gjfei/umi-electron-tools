@@ -17,9 +17,10 @@ app.on('ready', () => {
     mainWindow.webContents.openDevTools()
     mainWindow.loadURL('http://localhost:3000') // 加载那个页面
   } else {
+    mainWindow.webContents.openDevTools()
     mainWindow.loadURL(
       url.format({
-        pathname: path.join(__dirname, '../render/dist/index.html'),
+        pathname: path.join(__dirname, '../../dist/umi/index.html'),
         protocol: 'file:',
         slashes: true
       }),

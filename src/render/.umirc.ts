@@ -11,4 +11,7 @@ export default defineConfig({
   },
   outputPath: '../../dist/umi',
   routes: [{ path: '/', component: '@/pages/index' }],
+  chainWebpack: config => {
+    config.target('electron-renderer')
+  }
 });

@@ -1,9 +1,16 @@
 {
+  "name": "umi-electron-tools",
+  "version": "0.0.1",
+  "description": "umi-electron-tools",
+  "author": {
+    "name": "jarven"
+  },
   "private": true,
   "scripts": {
-    "start": "ts-node ./script/start.js",
+    "clean": "rimraf dist/**",
+    "start": "npm run clean && ts-node ./script/start.js",
     "start:web": "cross-env APP_ROOT=src/render umi dev",
-    "build": "ts-node ./script/build.js",
+    "build": "npm run clean && ts-node ./script/build.js",
     "build:web": "cross-env APP_ROOT=src/render umi build",
     "postinstall": "umi generate tmp",
     "test": "umi-test",

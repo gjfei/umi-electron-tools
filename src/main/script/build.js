@@ -1,10 +1,11 @@
 /**
  * webpack 构建
  */
+process.env.NODE_ENV = 'production';
+
 const webpack = require('webpack');
 const chalk = require('chalk');
 const config = require('../build/webpack.config.prod.js');
-
 const compiler = webpack(config);
 const TAG = '[src/main/script/build.js]';
 

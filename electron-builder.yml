@@ -1,0 +1,22 @@
+# 配置参考： https://www.electron.build/configuration/configuration
+# 应用id，不同平台有不同的规则建议
+# MacOS： https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-102070
+# Windows： https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c?redirectedfrom=MSDN
+appId: 'com.umi-electron-tools'
+# 应用名称
+productName: 'umi-electron-tools' # 应用名字
+
+directories:
+  # 构建资源文件目录，不会打包到app中，如果需要打包其中的一些文件比如托盘图标，需要在files字段中指定，比如 `"files": ["**/*", "build/icon.*"]`
+  buildResources: resources
+  # 打包输出目录
+  output: release/${version}
+  # 包含package.json的应用目录，默认会读取 `app`, `www`, 或当前工作目录，通常不用指定
+  # app: .
+
+#默认读取package.json中的version，可不添加
+buildVersion: 1.0.0 
+# 打包出的app文件名称，可以通过变量指定，比如这个配置打包后名称可能为`Electron Builder-1.0.0-latest.dmg`
+artifactName: ${productName}_${version}.${ext}
+# 指定需要复制过去打包的文件，https://www.electron.build/configuration/contents#files
+
