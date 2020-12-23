@@ -1,8 +1,7 @@
 import { app, BrowserWindow } from 'electron'
 import url from 'url'
 import path from 'path'
-
-const isDev = process.env.NODE_ENV === 'development'
+import isDev from 'electron-is-dev'
 
 app.on('ready', () => {
   let mainWindow: BrowserWindow | null = new BrowserWindow({
@@ -17,7 +16,6 @@ app.on('ready', () => {
     mainWindow.webContents.openDevTools()
     mainWindow.loadURL('http://localhost:3000') // 加载那个页面
   } else {
-    mainWindow.webContents.openDevTools()
     mainWindow.loadURL(
       url.format({
         pathname: path.join(__dirname, '../../dist/umi/index.html'),
