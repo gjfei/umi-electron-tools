@@ -17,8 +17,8 @@ concurrently([
     env: envConfig
   },
   {
-    command: `wait-on http://localhost:${envConfig.PORT} && electron .`,
+    command: `wait-on ${envConfig.ELECTRON_MAIN} ${envConfig.UMI_MAIN} && nodemon --watch ${envConfig.ELECTRON_MAIN} --exec electron .`,
     name: 'electron',
     env: envConfig
-  }
+  },
 ]);

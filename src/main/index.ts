@@ -1,4 +1,7 @@
-import { app, BrowserWindow } from 'electron'
+import {
+  app,
+  BrowserWindow
+} from 'electron'
 import url from 'url'
 import path from 'path'
 import isDev from 'electron-is-dev'
@@ -10,8 +13,8 @@ app.on('ready', () => {
     webPreferences: {
       nodeIntegration: true
     }
-  }) // 设置打开的窗口大小
-
+  })
+  // 设置打开的窗口大小
   if (isDev) {
     mainWindow.webContents.openDevTools()
     mainWindow.loadURL('http://localhost:3000') // 加载那个页面

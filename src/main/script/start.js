@@ -12,7 +12,9 @@ compiler.hooks.beforeCompile.tap(TAG, (arg0) => {
   console.log(TAG, chalk.yellow('Electron webpack 开始构建'));
 });
 
-compiler.run((err, stats) => {
+compiler.watch({
+
+},(err, stats) => {
   if (err) {
     // err 对象将只包含与webpack相关的问题，例如错误配置等
     console.log(TAG, chalk.red('💥 Electron webpack 相关报错'));
