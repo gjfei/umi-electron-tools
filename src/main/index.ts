@@ -14,6 +14,7 @@ app.on('ready', () => {
       nodeIntegration: true
     }
   })
+  mainWindow.maximize()
   // 设置打开的窗口大小
   if (isDev) {
     mainWindow.webContents.openDevTools()

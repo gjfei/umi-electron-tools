@@ -7,7 +7,7 @@ const envConfig = dotenv.parse(fs.readFileSync(path.resolve(__dirname, '../.env'
 
 concurrently([
   {
-    command: 'ts-node ./src/main/script/start.js',
+    command: 'ts-node ./script/startApp.js',
     name: 'electron:build',
     env: envConfig
   },
