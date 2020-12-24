@@ -17,7 +17,7 @@ concurrently([
     env: envConfig
   },
   {
-    command: 'wait-on ./dist/electron/index.js ./dist/umi/index.html && electron-builder',
+    command: `wait-on ${envConfig.ELECTRON_MAIN} ${envConfig.UMI_MAIN} && electron-builder`,
     name: 'build',
     env: envConfig
   },
