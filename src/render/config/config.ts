@@ -1,17 +1,19 @@
-import { defineConfig } from 'umi';
+import { defineConfig } from 'umi'
+import WebpackChain from 'webpack-chain'
+import routes from './routes'
 export default defineConfig({
   favicon: 'favicon.ico',
   base: './',
   publicPath: './',
   history: {
-    type: 'hash',
+    type: 'hash'
   },
   nodeModulesTransform: {
-    type: 'none',
+    type: 'none'
   },
   outputPath: '../../dist/umi',
-  routes: [{ path: '/', component: '@/pages/index' }],
-  chainWebpack: config => {
+  chainWebpack: (config: WebpackChain) => {
     config.target('electron-renderer')
-  }
-});
+  },
+  routes
+})

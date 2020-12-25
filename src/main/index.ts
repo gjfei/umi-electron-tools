@@ -15,6 +15,7 @@ app.on('ready', () => {
     }
   })
   mainWindow.maximize()
+  // mainWindow.setAlwaysOnTop(true)
   // 设置打开的窗口大小
   if (isDev) {
     mainWindow.webContents.openDevTools()
