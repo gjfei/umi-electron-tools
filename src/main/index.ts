@@ -11,7 +11,8 @@ app.on('ready', () => {
     width: 800,
     height: 800,
     webPreferences: {
-      contextIsolation: true
+      contextIsolation: true,
+      nodeIntegration: true
     }
   })
   mainWindow.maximize()

@@ -1,7 +1,11 @@
 import { defineConfig } from 'umi'
 import WebpackChain from 'webpack-chain'
 import routes from './routes'
+
 export default defineConfig({
+  chainWebpack: (config: WebpackChain) => {
+    return config.target('electron-renderer')
+  },
   favicon: 'favicon.ico',
   base: './',
   publicPath: './',
@@ -12,8 +16,5 @@ export default defineConfig({
     type: 'none'
   },
   outputPath: '../../dist/umi',
-  chainWebpack: (config: WebpackChain) => {
-    config.target('electron-renderer')
-  },
   routes
 })
